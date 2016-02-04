@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clicker Heroes Hero Damage Visualizer</title>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.2.1/lodash.js"></script>
+	<script src="https://code.angularjs.org/1.2.29/angular.min.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="data.js"></script>
+	<script src="script.js"></script>
+</head>
+<body ng-app>
+	<div>
+		<h3>Clicker Heroes Hero Damage Visualizer</h3>
+		Drag to move the chart and use the mouse wheel to zoom.
+	</div>
+	<div id="selector-div" ng-controller="CHCtrl">
+  		<div ng-repeat="hero in heroes">
+      		<label>
+        		<input type="checkbox" name="hero-select-{{$index}}" value="{{$index}}" ng-model="ui.heroesSelected[$index]" ng-change="reselect()" />{{hero.name}} 
+    		</label>
+  		</div>
+  	</div>
+	<div id="svg-div"></div>
+	<div id="footer">
+		Written Feb 2016 by /u/williamlp
+	</div>
+</body>
+</html>

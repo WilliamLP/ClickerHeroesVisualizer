@@ -1,0 +1,21 @@
+
+.grid path {
+	stroke-width: 0;
+}
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+circle {
+  stroke-width: 0.5px;
+}
+#svg-div {
+	float: left;
+}
+#selector-div {
+	padding-top: 50px;
+	float: left;
+}
+#footer {
+	clear: both;
+}
